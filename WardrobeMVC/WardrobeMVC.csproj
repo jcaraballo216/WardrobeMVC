@@ -202,8 +202,18 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\download %281%29.jpg" />
-    <Content Include="Content\Images\Wardrobe Images.jpg" />
+    <Content Include="Content\Images\Belt.jpg" />
+    <Content Include="Content\Images\casual.jpg" />
+    <Content Include="Content\Images\download%281%29.jpg" />
+    <Content Include="Content\Images\dresspants.jpg" />
+    <Content Include="Content\Images\dressshirt.jpg" />
+    <Content Include="Content\Images\dressshoes.jpg" />
+    <Content Include="Content\Images\hat.jpg" />
+    <Content Include="Content\Images\jeans.jpg" />
+    <Content Include="Content\Images\shorts.jpg" />
+    <Content Include="Content\Images\sneakers.jpg" />
+    <Content Include="Content\Images\sweater.jpg" />
+    <Content Include="Content\Images\tshirt.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

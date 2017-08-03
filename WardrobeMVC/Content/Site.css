@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+#picture{
+    width:75px;
+}
+#picture1 {
+    width:75px;
+}

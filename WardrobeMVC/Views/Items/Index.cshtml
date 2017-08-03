@@ -11,12 +11,11 @@
 </p>
 <table class="table">
     <tr>
-        
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Photo)
+           @Html.DisplayNameFor(model => model.Photo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ClothingType.TypeName)
@@ -39,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Photo)
+            <img src="@Html.DisplayFor(modelItem => item.Photo)" id="picture" /> 
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ClothingType.TypeName)
