@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -80,6 +88,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -148,23 +158,77 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClothingTypesController.cs" />
+    <Compile Include="Controllers\ColorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\OccassionsController.cs" />
+    <Compile Include="Controllers\SeasonsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClothingType.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingType.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClothingType.cs">
+      <DependentUpon>ClothingType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClothingType.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingType.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClothingType1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClothingType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Color.cs">
+      <DependentUpon>ClothingType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Item.cs">
+      <DependentUpon>ClothingType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Occassion.cs">
+      <DependentUpon>ClothingType.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Season.cs">
+      <DependentUpon>ClothingType.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\download %281%29.jpg" />
+    <Content Include="Content\Images\Wardrobe Images.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ClothingType.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClothingType.edmx</DependentUpon>
+      <LastGenOutput>ClothingType.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ClothingType.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClothingType.edmx</DependentUpon>
+      <LastGenOutput>ClothingType1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\ClothingType.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClothingType.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ClothingType.edmx.diagram">
+      <DependentUpon>ClothingType.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -192,10 +256,34 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ClothingTypes\Create.cshtml" />
+    <Content Include="Views\ClothingTypes\Delete.cshtml" />
+    <Content Include="Views\ClothingTypes\Details.cshtml" />
+    <Content Include="Views\ClothingTypes\Edit.cshtml" />
+    <Content Include="Views\ClothingTypes\Index.cshtml" />
+    <Content Include="Views\Colors\Create.cshtml" />
+    <Content Include="Views\Colors\Delete.cshtml" />
+    <Content Include="Views\Colors\Details.cshtml" />
+    <Content Include="Views\Colors\Edit.cshtml" />
+    <Content Include="Views\Colors\Index.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Occassions\Create.cshtml" />
+    <Content Include="Views\Occassions\Delete.cshtml" />
+    <Content Include="Views\Occassions\Details.cshtml" />
+    <Content Include="Views\Occassions\Edit.cshtml" />
+    <Content Include="Views\Occassions\Index.cshtml" />
+    <Content Include="Views\Seasons\Create.cshtml" />
+    <Content Include="Views\Seasons\Delete.cshtml" />
+    <Content Include="Views\Seasons\Details.cshtml" />
+    <Content Include="Views\Seasons\Edit.cshtml" />
+    <Content Include="Views\Seasons\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -204,6 +292,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
