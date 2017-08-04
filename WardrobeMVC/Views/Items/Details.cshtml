@@ -9,55 +9,32 @@
 <div>
     <h4>Item</h4>
     <hr />
-    <div class="card">
-        <div class="card-block">
+    <div class="row">
+        <div class="col-md-8">
+            <img src="@Html.DisplayFor(model => model.Photo)" id="picture1" />
+        </div>
+
+        <div class="col-md-4">
             <div>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)
+            </div>
+            <br />
+            <div>
+                @Html.DisplayNameFor(model => model.ClothingType.TypeName) : @Html.DisplayFor(model => model.ClothingType.TypeName)
+            </div>
+            <br />
+            <div>
+                @Html.DisplayNameFor(model => model.Color.ColorName) :  @Html.DisplayFor(model => model.Color.ColorName)
+            </div>
+            <br />
+            <div>
+                @Html.DisplayNameFor(model => model.Occassion.OccassionName) : @Html.DisplayFor(model => model.Occassion.OccassionName)
+            </div>
+            <br />
+            <div>
+                @Html.DisplayNameFor(model => model.Season.SeasonName) : @Html.DisplayFor(model => model.Season.SeasonName)
             </div>
 
-            <div>
-                @Html.DisplayFor(model => model.Name)
-            </div>
-
-            <div>
-                @Html.DisplayNameFor(model => model.Photo)
-            </div>
-
-            <div>
-                <img src="@Html.DisplayFor(model => model.Photo)" id="picture1" />
-            </div>
-
-            <div>
-                @Html.DisplayNameFor(model => model.ClothingType.TypeName)
-            </div>
-
-            <div>
-                @Html.DisplayFor(model => model.ClothingType.TypeName)
-            </div>
-
-            <div>
-                @Html.DisplayNameFor(model => model.Color.ColorName)
-            </div>
-
-            <div>
-                @Html.DisplayFor(model => model.Color.ColorName)
-            </div>
-
-            <div>
-                @Html.DisplayNameFor(model => model.Occassion.OccassionName)
-            </div>
-
-            <div>
-                @Html.DisplayFor(model => model.Occassion.OccassionName)
-            </div>
-
-            <div>
-                @Html.DisplayNameFor(model => model.Season.SeasonName)
-            </div>
-
-            <div>
-                @Html.DisplayFor(model => model.Season.SeasonName)
-            </div>
 
         </div>
     </div>

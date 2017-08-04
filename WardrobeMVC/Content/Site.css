@@ -27,7 +27,7 @@ textarea {
     width:75px;
 }
 #picture1 {
-    width:75px;
+    width:300px;
 }
 
 
@@ -60,19 +60,26 @@ textarea {
 }
 #index {
     text-align:center;
+    
 }
 #evy {
     line-height: 5;
     font-size:20px;
     border-style:solid;
+    width:50%;
 }
-.row.thumbnail {
-    background-image: url('Images/paint.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    opacity:25;
-}
+
+
 #index {
     color:black;
 }
+.nav a {
+    font-style:italic;
+}
+ a:hover{
+    display:block;
+    background-color:black;
+    color:black;
+}
+
 
