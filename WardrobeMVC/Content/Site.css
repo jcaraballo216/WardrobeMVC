@@ -62,7 +62,17 @@ textarea {
     text-align:center;
 }
 #evy {
-    line-height:5;
+    line-height: 5;
+    font-size:20px;
     border-style:solid;
-    border-color:gray;
 }
+.row.thumbnail {
+    background-image: url('Images/paint.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    opacity:25;
+}
+#index {
+    color:black;
+}
+
