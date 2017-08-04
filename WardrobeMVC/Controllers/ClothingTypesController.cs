@@ -19,7 +19,7 @@ namespace WardrobeMVC.Controllers
         {
             return View(db.ClothingTypes.ToList());
         }
-
+       
         // GET: ClothingTypes/Details/5
         public ActionResult Details(int? id)
         {

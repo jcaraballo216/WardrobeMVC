@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Sedgwick Ave', cursive;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,4 +28,33 @@ textarea {
 }
 #picture1 {
     width:75px;
+}
+
+
+
+.jumbotron {
+    background-image: url('Images/closet2.jpg');
+    background-size: cover;
+    padding-bottom: 375px;
+    font-size:large;
+    color:ghostwhite;
+    text-align:center;
+     margin:0px;
+    line-height:5;
+    font-size:30px;
+    border:0px;
+}
+.navbar-brand {
+    color:ghostwhite !important;
+}
+.nav a {
+    color:ghostwhite !important;
+}
+.col-md-12 {
+    background-color:darkgrey;
+    color:white;
+    text-align:center;
+}
+#bar {
+    font-style:italic;
 }

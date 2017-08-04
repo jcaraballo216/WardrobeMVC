@@ -204,6 +204,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\Belt.jpg" />
     <Content Include="Content\Images\casual.jpg" />
+    <Content Include="Content\Images\closet.jpg" />
+    <Content Include="Content\Images\closet2.jpg" />
     <Content Include="Content\Images\download%281%29.jpg" />
     <Content Include="Content\Images\dresspants.jpg" />
     <Content Include="Content\Images\dressshirt.jpg" />
