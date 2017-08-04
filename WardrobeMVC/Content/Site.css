@@ -58,3 +58,11 @@ textarea {
 #bar {
     font-style:italic;
 }
+#index {
+    text-align:center;
+}
+#evy {
+    line-height:5;
+    border-style:solid;
+    border-color:gray;
+}
