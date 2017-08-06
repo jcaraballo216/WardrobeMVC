@@ -206,13 +206,16 @@
     <Content Include="Content\Images\casual.jpg" />
     <Content Include="Content\Images\closet.jpg" />
     <Content Include="Content\Images\closet2.jpg" />
+    <Content Include="Content\Images\colors1.jpg" />
     <Content Include="Content\Images\download%281%29.jpg" />
     <Content Include="Content\Images\dresspants.jpg" />
     <Content Include="Content\Images\dressshirt.jpg" />
     <Content Include="Content\Images\dressshoes.jpg" />
     <Content Include="Content\Images\hat.jpg" />
     <Content Include="Content\Images\jeans.jpg" />
+    <Content Include="Content\Images\occasion.jpg" />
     <Content Include="Content\Images\paint.jpg" />
+    <Content Include="Content\Images\season.jpg" />
     <Content Include="Content\Images\shorts.jpg" />
     <Content Include="Content\Images\sneakers.jpg" />
     <Content Include="Content\Images\sweater.jpg" />

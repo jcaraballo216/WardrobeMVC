@@ -6,7 +6,7 @@
 
 
 @*Making div to style Index page*@
-<div class="row thumbnail" id="index">
+<div class="row thumbnail" id="basic">
     <h2>Index</h2>
 
     <p>
@@ -14,7 +14,7 @@
     </p>
     
         <div>
-            @Html.DisplayNameFor(model => model.ColorName)
+          <h1>@Html.DisplayNameFor(model => model.ColorName)</h1>
         </div>
   
 
@@ -22,18 +22,19 @@
 
     @foreach (var item in Model)
     {
-        <div class="col-md-3" id="evy">
-            <div>
+        <div class="col-md-3" id="occ">
                 <div>
-                    @Html.DisplayFor(modelItem => item.ColorName)
-                </div>
-                <div>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ColorID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ColorID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ColorID }) |
+                    <div>
+                        @Html.DisplayFor(modelItem => item.ColorName) 
+                    </div>
+                    <div>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ColorID }) |
+                        @*@Html.ActionLink("Create", "Create", new { id = item.ColorID }) |*@
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ColorID }) 
+                    </div>
                 </div>
             </div>
-        </div>
+        
     }
 
 </div>

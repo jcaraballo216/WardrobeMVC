@@ -3,31 +3,33 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="row thumbnail" id="index">
+    <h2>Index</h2>
 
-<h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <div>
+        <div>
+           <h1>@Html.DisplayNameFor(model => model.SeasonName)</h1>
+        </div>
+        <div></div>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.SeasonName)
-        </th>
-        <th></th>
-    </tr>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3" id="evy">
+            <div>
+                <div>
+                    @Html.DisplayFor(modelItem => item.SeasonName)
+                </div>
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SeasonID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.SeasonID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SeasonID })
+                </div>
+            </div>
+        </div>
+    }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SeasonName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SeasonID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SeasonID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SeasonID })
-        </td>
-    </tr>
-}
-
-</table>
+</div>

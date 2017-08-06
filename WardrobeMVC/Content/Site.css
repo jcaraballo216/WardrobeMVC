@@ -62,11 +62,29 @@ textarea {
     text-align:center;
     
 }
+#basic {
+    text-align:center;
+    background-image: url('Images/colors1.jpg');
+    background-size:cover;
+    color:white;
+    
+    
+  
+    
+}
 #evy {
     line-height: 5;
-    font-size:20px;
+    font-size: 20px;
+    background-image: url('Images/season.jpg');
+    padding:5px;
+}
+#occ {
+    line-height: 7;
+    font-size: 20px;
     border-style:solid;
-    width:50%;
+    margin:0px;
+    
+    
 }
 
 
@@ -76,10 +94,15 @@ textarea {
 .nav a {
     font-style:italic;
 }
- a:hover{
-    display:block;
-    background-color:black;
-    color:black;
+#Annette {
+    line-height: 5;
+    font-size: 20px;
+    background-image: url('Images/occasion.jpg');
+    padding: 5px;
+    width:20%;
+    align-content:center;
+    color:white;
 }
-
+ 
+ 
 
